@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Portfolio } from "./components/github-portfolio.jsx";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Repositories from "./components/Repositories.jsx";
+import Errorpage from "./components/ErrorPage.jsx";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="container">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/Repositories" element={<Repositories />} />
+          <Route path="*" element={<Errorpage />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
-
-export default App;

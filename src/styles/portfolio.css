@@ -1,0 +1,76 @@
+.portfolioContainer{
+  width: 300px;
+  height: 500px;
+  box-shadow: 3px 10px 20px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  font-weight: 700;
+  position: relative;
+}
+.heading{
+  position: absolute;
+  height: 30px;
+  width: 50%;
+  top: 0;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 3px 10px 20px rgba(0,0,0,0.1);
+}
+.portfolioContainer,
+.portfolio {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.heading img{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -75px;
+  top: 25px;
+}
+.Image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 3px solid white;
+}
+.show {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+.repos {
+  border-radius: 10px;
+  width: 200px;
+  margin-top: 25px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 3px 10px 20px rgba(0,0,0,0.1);
+  border: 3px solid black;
+}
+a:link {
+  text-decoration: none;
+  font-weight: 700;
+}
+a:active {
+  color: red;
+}
+a:hover {
+  font-size: 18px;
+  text-decoration: none;
+}
+.number {
+  font-size: 20px;
+  font-weight: 900;
+}

@@ -1,0 +1,103 @@
+.repositories{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 530px;
+}
+.repoContainer{
+    height: 70%;
+    width: 300px;
+}
+
+.repository{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 65px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-left: 5px;
+    font-size: 11px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    color: #20B2AA;
+}
+.repository:hover{
+    background-color: #171515;
+    color: white;
+}
+.repo_name{
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.paging{
+    display: flex;
+    width: 265px;
+    height: 10%;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    color: black;
+    justify-content: space-between;
+}
+.paging li {
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+.paging li:hover, .paging li a:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #20B2AA;
+    cursor: pointer;
+    font-size: 18px;
+}
+.numb{
+    padding: 10px;
+    border-radius: 25%;
+}
+.previous, .next{
+    padding: 5px;
+    border-radius: 25%;
+}
+.paging__link--active{
+    color: #fff;
+    background: #20B2AA;
+}
+
+@keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #383636; /* Black */
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }
+ .portfolioContainer .loading{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 530px;
+}
+.repositories .loading{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}

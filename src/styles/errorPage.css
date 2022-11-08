@@ -1,0 +1,15 @@
+.errorPage{
+    width: 300px;
+    height: 530px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+}
+.error{
+    font-size: 50px;
+}
+.pageE{
+    margin-bottom: 50px;
+}
