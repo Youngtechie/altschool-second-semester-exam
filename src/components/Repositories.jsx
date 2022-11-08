@@ -14,7 +14,7 @@ export default function Repositories() {
 
   useEffect(() => {
     async function getRepos() {
-      let url = "/repos.json";
+      let url = "https://api.github.com/users/Youngtechie/repos";
       try {
         let res = await fetch(url);
         return await res.json();

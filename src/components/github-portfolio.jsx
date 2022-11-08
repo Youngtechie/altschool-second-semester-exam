@@ -9,7 +9,7 @@ export function Portfolio() {
 
   useEffect(() => {
     async function getProjects() {
-      let url = "/portfolio.json";
+      let url = "https://api.github.com/users/Youngtechie";
       try {
         let res = await fetch(url);
         return await res.json();
@@ -48,7 +48,7 @@ export function Portfolio() {
           <section className="repos">
             <b>Repositories</b>
             <section className="number">{Data.public_repos}</section>
-            <a href="/Repositories">View My Repos</a>
+            <a href="/Repositories">View My Public Repos</a>
           </section>
         </section>
         <section className="publicRepo"></section>
