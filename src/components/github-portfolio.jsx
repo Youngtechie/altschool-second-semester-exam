@@ -24,7 +24,7 @@ export function Portfolio() {
       }
   
       data();
-    }, 3000)
+    }, 2000)
 
     return ()=> clearTimeout(id)
     

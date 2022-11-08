@@ -30,7 +30,7 @@ export default function Repositories() {
         }
 
         data();
-      }, 1000)
+      }, 2000)
 
       return ()=> clearTimeout(id)
   }, []);
