@@ -6,6 +6,7 @@ import '../styles/repositories.css'
 
 export default function Repositories() {
   const repos = useRef(null);
+  const display = useRef(null)
   const [Data, setData] = useState([])
   const [pageCount, setPageCount] = useState(0)
   const [currentPage, setCurrentPage] = useState(null)
@@ -27,6 +28,8 @@ export default function Repositories() {
       let id = setTimeout(()=>{
         async function data() {
         setData(await getRepos());
+
+        
         }
 
         data();
@@ -51,7 +54,39 @@ const ChangePage = ({selected: selectedpage}) => {
   return <section className="repositories" ref={repos}><section className="repoContainer">
     {Data.length !== 0 && Data !== undefined ? currentPage.map((data)=>{
         return <section className="repository" key={data.id} onClick={()=>{
-          window.location.href = `${data.html_url}`
+          repos.current.innerHTML=`
+          <section class="eachRepo" ref=${display}>
+            <section class="Repo_head">
+              <section class="eachRepo_Branch"> Branch: ${data.default_branch}</section>
+              <section class="eachRepo_Visibility">Visibility: ${data.visibility}</section>
+            </section>
+
+            <section class="eachRepo_name">${data.name.toUpperCase()}</section>
+
+            <section class="Repo_body">
+              <section class="body1">
+                ${data.description !== null ? 
+                `<section class="eachRepo_Desc">Description: ${data.description}</section>` 
+                : 
+                `<section class="eachRepo_Desc">Description: No Description</section>`}
+
+                <section class="eachRepo_Language">Languages: ${data.language}</section>
+              </section>
+
+              <section class="body2">
+                  <section class="eachRepo_forks group">FORKS: ${data.forks}</section>
+                  <section class="eachRepo_stars group">STARS: ${data.stargazers_count}</section>
+                  <section class="eachRepo_watch group">WATCHERS: ${data.watchers}</section>
+                  <section class="eachRepo_issues group">ISSUES: ${data.open_issues}</section>
+              </section>
+            </section>
+
+            <section class="Repo_end">
+                <section class="Repo_link"><a href=${data.html_url}>View on Github</a></section>
+                <section class="Repo_link"><a href=''}>Back</a></section>
+            </section>
+            
+          </section>`
         }}>
           <section className="repo_name">{data.name.toUpperCase()}</section>
           <section className="repo_lang">{data.description}</section> 
