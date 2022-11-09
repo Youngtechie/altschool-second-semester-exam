@@ -68,9 +68,14 @@ const ChangePage = ({selected: selectedpage}) => {
                 ${data.description !== null ? 
                 `<section class="eachRepo_Desc">Description: ${data.description}</section>` 
                 : 
-                `<section class="eachRepo_Desc">Description: No Description</section>`}
+                `<section class="eachRepo_Desc">Description: No Description</section>`
+                }
 
-                <section class="eachRepo_Language">Languages: ${data.language}</section>
+                ${data.language !== null ? 
+                `<section class="eachRepo_Language">Major Language: ${data.language}</section>`
+                :
+                `<section class="eachRepo_Language">Major Language: None</section>`
+                }
               </section>
 
               <section class="body2">
