@@ -81,7 +81,7 @@ const ChangePage = ({selected: selectedpage}) => {
               <section class="body2">
                   <section class="eachRepo_forks group">FORKS: ${data.forks}</section>
                   <section class="eachRepo_stars group">STARS: ${data.stargazers_count}</section>
-                  <section class="eachRepo_watch group">WATCHERS: ${data.watchers}</section>
+                  <section class="eachRepo_watch group">WATCH: ${data.watchers}</section>
                   <section class="eachRepo_issues group">ISSUES: ${data.open_issues}</section>
               </section>
             </section>
